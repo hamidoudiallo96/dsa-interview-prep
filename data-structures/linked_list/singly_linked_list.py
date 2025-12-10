@@ -132,7 +132,7 @@ class SinglyLinkedList:
         if pos == self.size - 1:
             return self.delete_at_tail()
 
-        curr = self.head
+        curr = cast(ListNode, self.head)
 
         for _ in range(pos - 1):
             curr = curr.next
