@@ -38,7 +38,7 @@ class Solution:
             return 0
 
         n = len(arr)
-        start, end = len(arr) - 1, 0
+        start, end = -2, - 1
         min_v, max_v = float("inf"), float("-inf")
 
         for i in range(n):
@@ -52,10 +52,7 @@ class Solution:
             if arr[j] > min_v:
                 start = j
 
-        if start >= end:
-            return 0
-
-        return end - start + 1
+        return end - start + 1 if start != -2 else 0
 
 
 if __name__ == "__main__":
